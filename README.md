@@ -33,3 +33,18 @@
   - textField 내용 변경
     - [textField setIntValue:(int)]
     - [textField setStringValue:(NSString)]
+
+## NSControl
+- NSButton
+  - (void)setEnabled:(BOOL)yn // Button Disable, Enable
+  - (NSInteger)state  // 눌려있으면 1, 꺼져있으면 0
+  - (void)setState:(NSInteger)aState  // 버튼 설정
+- NSSlider
+  - (void)setFloatValue:(float)x  // 슬라이더를 x까지 움직인다.
+  - (float)floatValue // 슬라이더의 현재 값을 리턴한다.
+- NSTextView
+  - (NSString *)stringValue // 현재 값 리턴
+  - (void)setStringValue:(NSString *)aString  // 데이터 set
+  - (NSObject *)objectValue // 
+  - (void)setObjectValue:(NSObjct *)obj //
+- NSColorWell
