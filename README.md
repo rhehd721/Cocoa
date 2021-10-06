@@ -32,6 +32,39 @@
 - 클래스 또는 구조체가 다른 유형의 인스턴스로 책임을 전달 또는 위임할 수 있도록 하는 디자인 패턴
 - 즉, delegate는 사용자 인터페이스 제어에 관련된 권한을 위임받는다.
 
+### Delegate 주의사항
+- 메서드 이름을 잘못 적는것
+- 델리게이트 아웃렛 지정을 잊어 버리는 것
+
+### Delegate를 가지는 객체들
+- NSAlert
+- NSAnimation
+- NSApplication
+- NSBrowser
+- NSDatePiker
+- NSDrawer
+- NSFontManager
+- NSImage
+- NSLayoutManager
+- NSMatrix
+- NSMenu
+- NSPathControl
+- NSRuleEditor
+- NSSavePanel
+- NSSound
+- NSSpeechRecognizer
+- NSSpeechSynthesizer
+- NSSplitView
+- NSTabView
+- NSTableView
+- NSText
+- NSTextField
+- NSTextStorage
+- NSTextView
+- NSTokenField
+- NSToolbar
+- NSWindow
+
 
 ## Library
 - NSTextField
@@ -55,3 +88,21 @@
 - NSColorWell
 
 ## NSTableView
+
+## Key-value Coding : KVC
+- 변수의 이름으로 변수의 값을 설정하거나 가져오는 방식
+```objc
+@interface Student : NSObject{
+  NSString *firstName;
+}
+...
+@end
+
+Student *s = [[Student alloc]init];
+[s setValue@"Larry" forKey:@"firstName"];
+
+NSString *x = [s valueForKey:@"firstName"];
+```
+
+##  Key-value Observing : KVO
+- 특정 키의 값의 변화를 감지하기 위한 기능
