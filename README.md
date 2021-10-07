@@ -31,6 +31,18 @@
 ## Delegate
 - 클래스 또는 구조체가 다른 유형의 인스턴스로 책임을 전달 또는 위임할 수 있도록 하는 디자인 패턴
 - 즉, delegate는 사용자 인터페이스 제어에 관련된 권한을 위임받는다.
+```objc
+@protocol UIWebViewDelegate <NSObject>
+@optional
+- (void)webViewDidStartLoad:(UIWebView *)webView;
+// ... other methods here
+@end
+
+@interface MyClass <UIWebViewDelegate>
+@property id <UIWebViewDelegate> delegate;
+// ...
+@end
+```
 
 ### Delegate 주의사항
 - 메서드 이름을 잘못 적는것
