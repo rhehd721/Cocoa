@@ -43,6 +43,12 @@
 // ...
 @end
 ```
+- AppDelegate에 delegate추가하기
+```
+@interface AppDelegate ()
+@property DelegateClass *ptr;
+@end
+```
 
 ### Delegate 주의사항
 - 메서드 이름을 잘못 적는것
