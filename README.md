@@ -129,3 +129,7 @@ NSString *x = [s valueForKey:@"firstName"];
 - NSWindow 서브클래스
 
 ## NSMenu
+
+## NSNotification
+- 옵저버가 필요로 하는 데이터를 담은 봉투
+- NSNotificationCenter
