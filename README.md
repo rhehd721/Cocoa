@@ -84,6 +84,24 @@
 - NSWindow
 
 
+## Key-value Coding : KVC
+- 변수의 이름으로 변수의 값을 설정하거나 가져오는 방식
+```objc
+@interface Student : NSObject{
+  NSString *firstName;
+}
+...
+@end
+
+Student *s = [[Student alloc]init];
+[s setValue@"Larry" forKey:@"firstName"];
+
+NSString *x = [s valueForKey:@"firstName"];
+```
+
+##  Key-value Observing : KVO
+- 특정 키의 값의 변화를 감지하기 위한 기능
+
 ## Library
 - NSTextField
   - textField 내용 변경
@@ -107,20 +125,7 @@
 
 ## NSTableView
 
-## Key-value Coding : KVC
-- 변수의 이름으로 변수의 값을 설정하거나 가져오는 방식
-```objc
-@interface Student : NSObject{
-  NSString *firstName;
-}
-...
-@end
+## NSPanel
+- NSWindow 서브클래스
 
-Student *s = [[Student alloc]init];
-[s setValue@"Larry" forKey:@"firstName"];
-
-NSString *x = [s valueForKey:@"firstName"];
-```
-
-##  Key-value Observing : KVO
-- 특정 키의 값의 변화를 감지하기 위한 기능
+## NSMenu
