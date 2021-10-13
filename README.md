@@ -125,6 +125,136 @@ NSString *x = [s valueForKey:@"firstName"];
 
 ## NSTableView
 
+## NSOutlineView
+```objc
+// 사용법 예시
+-(id)initWithWindowNibName:(NSString*)Name{
+    NSLog(@"initWithWindowNibName");
+    self = [super initWithWindowNibName:Name];
+    
+    if(self){
+        // add data
+        _aClassStudent_1 = [NSMutableDictionary dictionary];
+        [_aClassStudent_1 setObject:@"aClassStudent_1" forKey:@"parent"];
+        [_aClassStudent_1 setObject:@"name : park, age : 10, sex : male" forKey:@"Infomation"];
+        _aClassStudent_2 = [NSMutableDictionary dictionary];
+        [_aClassStudent_2 setObject:@"aClassStudent_2" forKey:@"parent"];
+        [_aClassStudent_2 setObject:@"name : park, age : 10, sex : male" forKey:@"Infomation"];
+        _aClassStudent_3 = [NSMutableDictionary dictionary];
+        [_aClassStudent_3 setObject:@"aClassStudent_3" forKey:@"parent"];
+        [_aClassStudent_3 setObject:@"name : park, age : 10, sex : male" forKey:@"Infomation"];
+        
+        _bClassStudent_1 = [NSMutableDictionary dictionary];
+        [_bClassStudent_1 setObject:@"bClassStudent_1" forKey:@"parent"];
+        [_bClassStudent_1 setObject:@"name : park, age : 10, sex : male" forKey:@"Infomation"];
+        _bClassStudent_2 = [NSMutableDictionary dictionary];
+        [_bClassStudent_2 setObject:@"bClassStudent_2" forKey:@"parent"];
+        [_bClassStudent_2 setObject:@"name : park, age : 10, sex : male" forKey:@"Infomation"];
+        _bClassStudent_3 = [NSMutableDictionary dictionary];
+        [_bClassStudent_3 setObject:@"bClassStudent_3" forKey:@"parent"];
+        [_bClassStudent_3 setObject:@"name : park, age : 10, sex : male" forKey:@"Infomation"];
+        
+        _cClassStudent_1 = [NSMutableDictionary dictionary];
+        [_cClassStudent_1 setObject:@"cClassStudent_1" forKey:@"parent"];
+        [_cClassStudent_1 setObject:@"name : park, age : 10, sex : male" forKey:@"Infomation"];
+        _cClassStudent_2 = [NSMutableDictionary dictionary];
+        [_cClassStudent_2 setObject:@"cClassStudent_2" forKey:@"parent"];
+        [_cClassStudent_2 setObject:@"name : park, age : 10, sex : male" forKey:@"Infomation"];
+        _cClassStudent_3 = [NSMutableDictionary dictionary];
+        [_cClassStudent_3 setObject:@"cClassStudent_3" forKey:@"parent"];
+        [_cClassStudent_3 setObject:@"name : park, age : 10, sex : male" forKey:@"Infomation"];
+        
+        _classA = [NSMutableDictionary dictionary];
+        [_classA setObject:@"ClassA" forKey:@"parent"];
+        [_classA setObject:[NSMutableArray arrayWithObjects:_aClassStudent_1, _aClassStudent_2, _aClassStudent_3, nil] forKey:@"children"];
+        
+        _classB = [NSMutableDictionary dictionary];
+        [_classB setObject:@"ClassB" forKey:@"parent"];
+        [_classB setObject:[NSMutableArray arrayWithObjects:_bClassStudent_1, _bClassStudent_2, _bClassStudent_3, nil] forKey:@"children"];
+        
+        _classC = [NSMutableDictionary dictionary];
+        [_classC setObject:@"ClassC" forKey:@"parent"];
+        [_classC setObject:[NSMutableArray arrayWithObjects:_cClassStudent_1, _cClassStudent_2, _cClassStudent_3, nil] forKey:@"children"];
+        
+        _school = [NSMutableArray arrayWithObjects:_classA, _classB, _classC, nil];
+    }
+
+    return self;
+}
+
+- (void)windowDidLoad {
+    [super windowDidLoad];
+    [_schoolTableView reloadData];
+}
+
+- (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item   // 전체 데이터 크기?   // count == index??
+{
+    if (item == nil) { //item is nil when the outline view wants to inquire for root level items
+        return [_school count];
+    }
+
+    if ([item isKindOfClass:[NSMutableDictionary class]]) {    // dic 이라면
+        return [[item objectForKey:@"children"] count];
+    }
+
+    return 0;
+}
+
+- (id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item
+{
+    
+
+    if (item == nil) { //item is nil when the outline view wants to inquire for root level items
+        return [_school objectAtIndex:index];
+    }
+
+    if ([item isKindOfClass:[NSMutableDictionary class]]) {    // dic 이라면
+        return [[item objectForKey:@"children"] objectAtIndex:index];
+    }
+
+    return nil;
+}
+
+- (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item
+{
+    
+    if ([item isKindOfClass:[NSMutableDictionary class]]) {
+        if([item objectForKey:@"children"] == nil){
+            return NO;
+        }
+        return YES;
+    }else {
+        return NO;
+    }
+}
+
+- (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)theColumn byItem:(id)item
+{
+    
+    if ([[theColumn identifier] isEqualToString:@"Infomation"]) { // children 컬럼이 들어왔을 때
+        if ([item isKindOfClass:[NSMutableDictionary class]]) {
+            if([item objectForKey:@"Infomation"] != nil){
+                return [item objectForKey:@"Infomation"];
+            }
+            return [NSString stringWithFormat:@"%i folder",[[item objectForKey:@"children"] count]];
+        }
+    }else{
+        if ([item isKindOfClass:[NSMutableDictionary class]]) {
+            return [item objectForKey:@"parent"];
+        }
+        return item;
+    }
+
+    return nil;
+}
+```
+- outlineView에서 선택한 data의 정보 확인하는 방법
+```objc
+id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
+    NSLog(@"%@", selectedItem);
+```
+
+
 ## NSPanel
 - NSWindow 서브클래스
 
