@@ -184,6 +184,16 @@ NSString *x = [s valueForKey:@"firstName"];
 - (id)   outlineView: (NSOutlineView *)ov
          objectValueForTableColumn:(NSTableColumn*)col
          byItem:(id)item { return nil; }
+         
+- (BOOL) outlineView: (NSOutlineView *)ov
+          acceptDrop: (id )info
+                item: (id)item
+          childIndex: (int)index
+{
+    item = [item observedObject];
+    
+    // do whatever you would normally do with the item
+}
 ```
 ```objc
 // 사용법 예시
