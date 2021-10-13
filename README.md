@@ -170,6 +170,22 @@ NSString *x = [s valueForKey:@"firstName"];
 
 ## NSOutlineView
 ```objc
+// 필수 delegate
+- (BOOL) outlineView: (NSOutlineView *)ov
+         isItemExpandable: (id)item { return NO; }
+
+- (int)  outlineView: (NSOutlineView *)ov
+         numberOfChildrenOfItem:(id)item { return 0; }
+
+- (id)   outlineView: (NSOutlineView *)ov
+         child:(int)index
+         ofItem:(id)item { return nil; }
+
+- (id)   outlineView: (NSOutlineView *)ov
+         objectValueForTableColumn:(NSTableColumn*)col
+         byItem:(id)item { return nil; }
+```
+```objc
 // 사용법 예시
 -(id)initWithWindowNibName:(NSString*)Name{
     NSLog(@"initWithWindowNibName");
