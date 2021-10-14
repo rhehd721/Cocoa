@@ -113,25 +113,31 @@ NSString *x = [s valueForKey:@"firstName"];
   - (void)setEnabled:(BOOL)yn // Button Disable, Enable
   - (NSInteger)state  // 눌려있으면 1, 꺼져있으면 0
   - (void)setState:(NSInteger)aState  // 버튼 설정
+
 |메서드|내용|
 |------|---|
 |-(void)setEnabled:(BOOL)yn|Button의 활성화 설정|
 |-(NSInteger)state|Button이 켜져있으면 1 아니면 0|
 |-(void)setState:(NSInteger)aState|NSOnState, NSOffState를 이용하여 Button을 끄고 킨다.|
+
 - NSSlider
   - (void)setFloatValue:(float)x  // 슬라이더를 x까지 움직인다.
   - (float)floatValue // 슬라이더의 현재 값을 리턴한다.
+
 |메서드|내용|
 |------|---|
 |-(void)setFloatValue:(float)x|슬라이더를 x만큼 움직인다.|
 |-(float)floatValue|현재 슬라이더의 값을 리턴|
+
 - NSTextField
+
 |메서드|내용|
 |------|---|
 |-(NSString *)stringValue|현재 값 리턴|
 |-(void)setStringValue:(NSString *)aString|데이터 set|
 |-(NSObject *)objectValue|임의 객체 유형으로 가져오기|
 |-(void)setObjectValue:(NSObjct *)obj|임의 객체 유형으로 설정하기 |
+
 - NSColorWell
 
 ## NSTableView
