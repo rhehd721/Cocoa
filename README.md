@@ -29,6 +29,7 @@
 ```
 
 ## Delegate
+- -(BOOL)respondsToSelector:(SEL)aSelector
 - 클래스 또는 구조체가 다른 유형의 인스턴스로 책임을 전달 또는 위임할 수 있도록 하는 디자인 패턴
 - 즉, delegate는 사용자 인터페이스 제어에 관련된 권한을 위임받는다.
 ```objc
