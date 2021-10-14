@@ -102,6 +102,17 @@ NSString *x = [s valueForKey:@"firstName"];
 
 ##  Key-value Observing : KVO
 - 특정 키의 값의 변화를 감지하기 위한 기능
+```objc
+// fido의 값이 변경되면 나에게 메세지를 보내줘!
+[theAppDelegate addObserver:self forKeyPath:@"fido" options:NSKeyValueChangeOldKey context:somePointer];
+
+// 값이 변결될 떄 실행되는 메서드
+-(void)observeValueForKeyPath:(NSString*)ketPath ofObject:(id)object change:(NSDictionary *)chage context:(void *)context{
+  // ...
+}
+
+
+```
 
 ## Library
 - NSTextField
