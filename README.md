@@ -358,6 +358,16 @@ id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
 
 ## NSMenu
 
+## NSUndoManager(ctrl+z)
+- 애플리케이션에 취소 기능(Undo)을 추가할 수 있는 방법
+- 객체 추가, 삭제, 편집 동작을 취소하는 메세지를 취소하기 관리지(undo manager(에서 모두 추적할 수 있다.
+### NSInvocation
+- 메세지(selector, receiver)를 마음대로 부를 수 있는 객체로 만드는 인스턴스
+
+|메서드|내용|추가설명|
+|---|---|---|
+|-(void)forwardInvocation:(NSInvocation *)x|Message Forwarding 메서스|메세지가 NSInvication으로 변환되어 forwardInvocation:을 호출한다.|
+
 ## NSNotification
 - 옵저버가 필요로 하는 데이터를 담은 봉투
 - NSNotificationCenter( == 명령을 내리는 두뇌)
