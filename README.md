@@ -360,4 +360,10 @@ id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
 
 ## NSNotification
 - 옵저버가 필요로 하는 데이터를 담은 봉투
-- NSNotificationCenter
+- NSNotificationCenter( == 명령을 내리는 두뇌)
+  - 옵저버 객체를 등록하거나 노티피케이션을 알리고 옵저버 등록을 해제하는 일을 한다.
+|메서드|내용|
+|---|---|
+|+(NSNotificationCenter *)defaultCenter|노티피케이션 센터를 리턴하는 메서드|
+|테스트1|테스트2|
+|테스트1|테스트2|
