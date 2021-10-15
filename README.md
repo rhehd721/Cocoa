@@ -367,7 +367,7 @@ id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
 |메서드|내용|
 |---|---|
 |+(NSNotificationCenter *)defaultCenter|노티피케이션 센터를 리턴하는 메서드|
-|-(void)addObserver:(id)anObserver selector:(SEL)aSeletor name:(NSString *)notificationName object:(id)anObject|테스트2|
+|-(void)addObserver:(id)anObserver selector:(SEL)aSeletor name:(NSString *)notificationName object:(id)anObject|notificationName이란 이름과 anObject 객체를 포함한 노티피케이션을 받을 anObserver를 등록한다.|
 |-(void)postNotification:(NSNotification *)notification|노티피케이션을 노티피케이션 센터에 알리는 메서드|
 |-(void)postNotificationName:(NSString *)aName object:(id)anObject|노티피케이션을 만들어서 노티피케이션 센터로 알리는 메서드|
 |-(void)removeObserver:(id)observer|옵저버 목록에서 observer를 지우는 |
