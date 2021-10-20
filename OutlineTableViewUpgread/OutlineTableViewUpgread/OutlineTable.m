@@ -108,8 +108,9 @@
 - (IBAction)pushKillBtn:(id)sender {
     id selectedItem = [_outlineTable itemAtRow:[_outlineTable selectedRow]];
     
-    if([selectedItem valueForKey:@"procName"] == @"PID"){
-        NSString * pid = [selectedItem valueForKey:@"value"];
+    if([selectedItem valueForKey:@"value"]){    // select informaion(children)
+        id parentItem = [_outlineTable parentForItem:selectedItem];
+        NSString * pid = [[parentItem valueForKey:@"information"][0] valueForKey:@"value"];
         if(pid == _myProcess){
             [self showPanel:@"The current process cannot be killed." color:[NSColor redColor]];
             return;
@@ -118,8 +119,16 @@
         [_terminalCmd killProcess:pid];
         [self dataReload];
         return;
+    }   // select procName(parent)
+    NSString * pid = [[selectedItem valueForKey:@"information"][0] valueForKey:@"value"];
+    if(pid == _myProcess){
+        [self showPanel:@"The current process cannot be killed." color:[NSColor redColor]];
+        return;
     }
-    [self showPanel:@"Please select the pid of the process." color:[NSColor yellowColor]];
+    _terminalCmd = [[TerminalCmd alloc]init];
+    [_terminalCmd killProcess:pid];
+    [self dataReload];
+    return;
 }
 
 -(void)showPanel:(NSString*)text color:(NSColor*)color{

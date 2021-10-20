@@ -26,8 +26,9 @@
     NSData *data = [file readDataToEndOfFile];
     [file closeFile];
 
-    NSString *grepOutput = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-    NSLog (@"kill : %@", grepOutput);
+//    NSString *grepOutput = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+//    NSLog (@"kill %@", grepOutput);
+    NSLog (@"kill");
 }
 
 @end
