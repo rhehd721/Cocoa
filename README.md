@@ -351,6 +351,10 @@ NSString *x = [s valueForKey:@"firstName"];
 id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
     NSLog(@"%@", selectedItem);
 ```
+- 메서드
+|메서드|내용|
+|---|---|
+|id selectedItem = [outlineView itemAtRow:[outlineView selectedRow]];|선택한 row의 value 가져오기|
 
 
 ## NSPanel
