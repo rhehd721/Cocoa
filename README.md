@@ -362,6 +362,27 @@ id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
 
 ## NSMenu
 
+## NSTask
+- 예제 코드
+```objc
+// ‘ /bin/grep foo bar.txt‘를 실행하는 예
+NSPipe *pipe = [NSPipe pipe];
+NSFileHandle *file = pipe.fileHandleForReading;
+
+NSTask *task = [[NSTask alloc] init];
+task.launchPath = @"/bin/grep";
+task.arguments = @[@"foo", @"bar.txt"];
+task.standardOutput = pipe;
+
+[task launch];
+
+NSData *data = [file readDataToEndOfFile];
+[file closeFile];
+
+NSString *grepOutput = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+NSLog (@"grep returned:\n%@", grepOutput);
+```
+
 ## NSUndoManager(ctrl+z)
 - 애플리케이션에 취소 기능(Undo)을 추가할 수 있는 방법
 - 객체 추가, 삭제, 편집 동작을 취소하는 메세지를 취소하기 관리지(undo manager(에서 모두 추적할 수 있다.
