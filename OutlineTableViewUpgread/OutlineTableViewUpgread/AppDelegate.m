@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <obtainFreshProcessList> 
 @property OutlineTable * outlineViewTable;
 @property BSDProcessList * processList;
 @end

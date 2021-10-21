@@ -156,7 +156,7 @@
         [processList addObject:process];    // list에 process 추가
     }
  
-    [self setNumberOfProcesses:numProcs];   // 현재 돌아가는 process 갯수 알리기
+    [self setNumberOfProcesses:(int)numProcs];   // 현재 돌아가는 process 갯수 알리기
  
     free( allProcs );
  

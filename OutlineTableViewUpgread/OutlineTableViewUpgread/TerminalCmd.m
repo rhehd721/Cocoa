@@ -23,7 +23,7 @@
 
     [task launch];
 
-    NSData *data = [file readDataToEndOfFile];
+//    NSData *data = [file readDataToEndOfFile];
     [file closeFile];
 
 //    NSString *grepOutput = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];

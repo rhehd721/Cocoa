@@ -21,8 +21,8 @@
 }
 
 - (void)windowDidLoad {
-    _myProcess = [NSString stringWithFormat:@"%d", [[NSProcessInfo processInfo] processIdentifier]];
-    _checkSortNum = YES;
+    _myProcess = [NSString stringWithFormat:@"%d", [[NSProcessInfo processInfo] processIdentifier]];    // 현재 이 process의 pid
+    _checkSortNum = YES;    // sort 오름차순 내림차순 카운트
     [super windowDidLoad];
     [self dataReload];
 }
@@ -72,7 +72,7 @@
             if([item objectForKey:@"value"]){
                 return [item valueForKey:@"value"];
             }
-            return [NSString stringWithFormat:@"%d pieces of information", [[item objectForKey:@"information"] count]];
+            return [NSString stringWithFormat:@"%lu pieces of information", (unsigned long)[[item objectForKey:@"information"] count]];
         }
     }else{  // data 컬럼이 아니라면
         if ([item isKindOfClass:[NSDictionary class]]) {
