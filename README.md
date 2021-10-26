@@ -360,6 +360,8 @@ id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
 ## NSPanel
 - NSWindow 서브클래스
 
+## NSTabView
+
 ## NSMenu
 
 ## NSTask
