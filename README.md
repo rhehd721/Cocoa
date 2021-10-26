@@ -159,6 +159,19 @@ NSString *x = [s valueForKey:@"firstName"];
 [_window_ setContentViewController:_view_];
 ```
 
+- CustomView 변경하기
+
+
+```objc
+  _testViewController = [[TestViewController alloc]initWithNibName:@"TestViewController" bundle:nil];
+  _testWindowController = [[TestWindowController alloc]initWithWindowNibName:@"TestWindowController"];
+    
+  
+  [_testWindowController showWindow:nil];
+    
+  [_testWindowController.customView addSubview:_testViewController.view];
+```
+
 ## NSTableView
 ```objc
 // 사용법 예시
