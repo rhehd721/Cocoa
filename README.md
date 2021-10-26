@@ -152,6 +152,13 @@ NSString *x = [s valueForKey:@"firstName"];
 
 - NSColorWell
 
+## NSWindowController
+- ContentViewController 변경
+
+```objc
+[_window_ setContentViewController:_view_];
+```
+
 ## NSTableView
 ```objc
 // 사용법 예시
