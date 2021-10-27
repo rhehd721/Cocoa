@@ -152,6 +152,27 @@ NSString *x = [s valueForKey:@"firstName"];
 
 - NSColorWell
 
+## NSWindowController
+- ContentViewController 변경
+
+```objc
+[_window_ setContentViewController:_view_];
+```
+
+- CustomView 변경하기
+
+
+```objc
+// 반드시 showWindow 이후 또는 windowDidLoad 이후에 addSubview를 넣어주어야 한다. (아마 showWindow를 해야 객체가 생성되는듯 싶다.)
+  _testViewController = [[TestViewController alloc]initWithNibName:@"TestViewController" bundle:nil];
+  _testWindowController = [[TestWindowController alloc]initWithWindowNibName:@"TestWindowController"];
+    
+  
+  [_testWindowController showWindow:nil];
+    
+  [_testWindowController.customView addSubview:_testViewController.view];
+```
+
 ## NSTableView
 ```objc
 // 사용법 예시
@@ -359,6 +380,8 @@ id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
 
 ## NSPanel
 - NSWindow 서브클래스
+
+## NSTabView
 
 ## NSMenu
 
