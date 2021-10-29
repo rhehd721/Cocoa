@@ -385,6 +385,8 @@ id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
 
 ## NSMenu
 
+## NSTread
+
 ## NSTask
 - 예제 코드
 ```objc
