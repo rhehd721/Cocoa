@@ -391,6 +391,7 @@ id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
 - 예제 코드
 ```objc
 // ‘ /bin/grep foo bar.txt‘를 실행하는 예
+// bar.txt 파일에서 foo 라는 문자열이 있는 라인을 찾아서 출력한다.
 NSPipe *pipe = [NSPipe pipe];
 NSFileHandle *file = pipe.fileHandleForReading;
 
