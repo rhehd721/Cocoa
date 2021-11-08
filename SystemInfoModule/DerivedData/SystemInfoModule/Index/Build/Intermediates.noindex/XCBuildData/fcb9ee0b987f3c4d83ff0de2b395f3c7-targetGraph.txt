@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+SystemInfoModule in SystemInfoModule, no dependencies
+SystemInfoModuleTests in SystemInfoModule, depends on:
+SystemInfoModule in SystemInfoModule (explicit)
+SystemInfoModuleUITests in SystemInfoModule, depends on:
+SystemInfoModule in SystemInfoModule (explicit)
