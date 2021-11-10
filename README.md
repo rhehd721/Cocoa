@@ -387,6 +387,20 @@ id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
 
 ## NSTread
 
+## NSDate
+```objc
+// 현재시간 구하기
+  NSDateFormatter * today = [[NSDateFormatter alloc] init];
+//  [today setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
+  [today setDateFormat:@"HH:mm:ss"];
+  NSString * date = [today stringFromDate:[NSDate date]];
+  NSLog(@"realTime : %@", date);
+
+// Milliseconds 구하기
+  NSTimeInterval seconds = [NSDate timeIntervalSinceReferenceDate];
+  double milliseconds = seconds*1000;
+```
+
 ## NSTask
 - 예제 코드
 ```objc
