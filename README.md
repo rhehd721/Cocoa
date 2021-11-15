@@ -423,6 +423,25 @@ NSString *grepOutput = [[NSString alloc] initWithData: data encoding: NSUTF8Stri
 NSLog (@"grep returned:\n%@", grepOutput);
 ```
 
+## File Read
+```objc
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"./test" ofType:@"txt"];
+    NSError *error;
+    NSString *fileContents = [NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:&error];
+
+    if (error)
+        NSLog(@"Error reading file: %@", error.localizedDescription);
+
+    // maybe for debugging...
+//    NSLog(@"contents: %@", fileContents);
+    for (id i in filepath){
+        NSLog(@"contents: %@", i);
+    }
+
+    NSArray *listArray = [fileContents componentsSeparatedByString:@"\n"];
+    NSLog(@"items = %lu", [listArray count]);
+```
+
 ## NSUndoManager(ctrl+z)
 - 애플리케이션에 취소 기능(Undo)을 추가할 수 있는 방법
 - 객체 추가, 삭제, 편집 동작을 취소하는 메세지를 취소하기 관리지(undo manager(에서 모두 추적할 수 있다.
