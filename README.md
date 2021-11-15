@@ -386,6 +386,11 @@ id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
 ## NSMenu
 
 ## NSTread
+```objc
+    _thread = [[NSThread alloc] initWithTarget:self selector:@selector(instanceName) object:nil];
+    [_thread start];
+    [_thread cancel];
+```
 
 ## NSDate
 ```objc
