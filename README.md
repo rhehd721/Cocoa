@@ -480,3 +480,9 @@ NSLog (@"grep returned:\n%@", grepOutput);
 
     });
 ```
+- Block implicitly retains 'self'; explicitly mention 'self' to indicate this is intended behavior
+```objc
+    // [_progressBarCircleView setNeedsDisplay:true];
+    // 아래처럼 변환
+    [self.progressBarCircleView setNeedsDisplay:true];
+```
