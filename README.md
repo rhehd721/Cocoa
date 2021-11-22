@@ -470,3 +470,13 @@ NSLog (@"grep returned:\n%@", grepOutput);
 |-(void)postNotification:(NSNotification *)notification|노티피케이션을 노티피케이션 센터에 알리는 메서드|
 |-(void)postNotificationName:(NSString *)aName object:(id)anObject|노티피케이션을 만들어서 노티피케이션 센터로 알리는 메서드|
 |-(void)removeObserver:(id)observer|옵저버 목록에서 observer를 지우는 |
+
+# ERROR
+- UI API called on a background thread
+```objc
+    dispatch_async(dispatch_get_main_queue(), ^{
+
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+
+    });
+```
