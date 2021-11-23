@@ -486,3 +486,5 @@ NSLog (@"grep returned:\n%@", grepOutput);
     // 아래처럼 변환
     [self.progressBarCircleView setNeedsDisplay:true];
 ```
+- IOS DYLD: LIBRARY NOT LOADED: ... REASON: IMAGE NOT FOUND
+  - Embed Libraries 에 해당 lib 추가
