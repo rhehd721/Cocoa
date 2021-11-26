@@ -488,3 +488,6 @@ NSLog (@"grep returned:\n%@", grepOutput);
 ```
 - IOS DYLD: LIBRARY NOT LOADED: ... REASON: IMAGE NOT FOUND
   - Embed Libraries 에 해당 lib 추가
+
+- nw_endpoint_handler_set_adaptive_write_handler
+  - ProjectSetting -> Info -> add (App Transport Security Settings) -> add (Allow Arbitrary Loads) YES  
