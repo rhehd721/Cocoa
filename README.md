@@ -491,3 +491,7 @@ NSLog (@"grep returned:\n%@", grepOutput);
 
 - nw_endpoint_handler_set_adaptive_write_handler
   - ProjectSetting -> Info -> add (App Transport Security Settings) -> add (Allow Arbitrary Loads) YES  
+
+- Command CodeSign failed with a nonzero exit code  
+  - cmd + shift + k
+  - cmd + shift + option + k 
