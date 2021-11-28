@@ -493,5 +493,6 @@ NSLog (@"grep returned:\n%@", grepOutput);
   - ProjectSetting -> Info -> add (App Transport Security Settings) -> add (Allow Arbitrary Loads) YES  
 
 - Command CodeSign failed with a nonzero exit code  
-  - cmd + shift + k
-  - cmd + shift + option + k 
+  - cd DerivedData 으로 이동한 후에
+  - xattr -c *
+  - xattr -rc .
