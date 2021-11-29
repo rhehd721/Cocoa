@@ -496,3 +496,6 @@ NSLog (@"grep returned:\n%@", grepOutput);
   - cd DerivedData 으로 이동한 후에
   - xattr -c *
   - xattr -rc .
+
+- no suitable image found.
+  - Code Signing Identify 문제 
