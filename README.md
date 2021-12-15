@@ -161,7 +161,6 @@ NSString *x = [s valueForKey:@"firstName"];
 
 - CustomView 변경하기
 
-
 ```objc
 // 반드시 showWindow 이후 또는 windowDidLoad 이후에 addSubview를 넣어주어야 한다. (아마 showWindow를 해야 객체가 생성되는듯 싶다.)
   _testViewController = [[TestViewController alloc]initWithNibName:@"TestViewController" bundle:nil];
@@ -171,6 +170,17 @@ NSString *x = [s valueForKey:@"firstName"];
   [_testWindowController showWindow:nil];
     
   [_testWindowController.customView addSubview:_testViewController.view];
+```
+
+- Title 변경하기
+
+```objc
+  _mainWindow = [[MainWindow alloc]initWithWindowNibName:@"MainWindow"];
+
+  NSString * windowTitle = @"New Title";
+  [_mainWindow.window setTitle:windowTitle];
+
+  [_mainWindow showWindow:nil];
 ```
 
 ## NSTableView
