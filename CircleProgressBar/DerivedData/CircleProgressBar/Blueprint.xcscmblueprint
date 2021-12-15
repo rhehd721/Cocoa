@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2F8368AF8286316B2D2BEB82DF6948EE5B78D912",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2F8368AF8286316B2D2BEB82DF6948EE5B78D912" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DE9B853F-EF58-4E1D-A79D-BE3592C521DA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2F8368AF8286316B2D2BEB82DF6948EE5B78D912" : "Cocoa\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CircleProgressBar",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CircleProgressBar\/CircleProgressBar.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rhehd721\/Cocoa.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2F8368AF8286316B2D2BEB82DF6948EE5B78D912"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+CircleProgressBar in CircleProgressBar, no dependencies
+CircleProgressBarTests in CircleProgressBar, depends on:
+CircleProgressBar in CircleProgressBar (explicit)
+CircleProgressBarUITests in CircleProgressBar, depends on:
+CircleProgressBar in CircleProgressBar (explicit)

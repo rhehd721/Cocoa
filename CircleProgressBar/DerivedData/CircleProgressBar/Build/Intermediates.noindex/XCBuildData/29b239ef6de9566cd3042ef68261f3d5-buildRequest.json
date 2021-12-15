@@ -1,0 +1,57 @@
+{
+  "_buildCommand2" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "6456e4aeffb0841a8d7f6825315e99209c00ee5a22877ccf2dcdeb9b927208ba"
+    }
+  ],
+  "containerPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/CircleProgressBar.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx12.0",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "x86_64h",
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData/CircleProgressBar/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData/CircleProgressBar/Build/Products",
+      "derivedDataPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData/CircleProgressBar/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData/CircleProgressBar/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData/CircleProgressBar/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

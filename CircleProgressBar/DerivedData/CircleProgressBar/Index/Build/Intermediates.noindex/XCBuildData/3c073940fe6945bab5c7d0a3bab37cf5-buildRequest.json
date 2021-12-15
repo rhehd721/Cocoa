@@ -1,0 +1,66 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "6456e4aeffb0841a8d7f6825315e99209c00ee5a22877ccf2dcdeb9b927208ba"
+    },
+    {
+      "guid" : "6456e4aeffb0841a8d7f6825315e99202ecc794079e1f6afb2f28fcaa78ed2f8"
+    },
+    {
+      "guid" : "6456e4aeffb0841a8d7f6825315e99204eb1b0de50d4445812c878989d0fdaa9"
+    }
+  ],
+  "containerPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/CircleProgressBar.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "activeArchitecture" : "x86_64h",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx12.0",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "x86_64h",
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64h"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData/CircleProgressBar/Index/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData/CircleProgressBar/Index/Build/Products",
+      "derivedDataPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData/CircleProgressBar/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData/CircleProgressBar/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData/CircleProgressBar/Index/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "INDEX_ARENA_INFO_REGULAR_BUILD_PRODUCTS_DIR" : "/Users/bhpark/Desktop/Cocoa/CircleProgressBar/DerivedData/CircleProgressBar/Build/Products",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "utility",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
