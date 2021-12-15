@@ -238,6 +238,24 @@ NSString *x = [s valueForKey:@"firstName"];
 @end
 ```
 
+- table data replace
+
+```objc
+-(void)updateTable:(NSInteger)index result:(NSInteger)result{
+    if(result == 0){
+        [_tableData replaceObjectAtIndex:index withObject:@"0"];
+    }else if(result == 1){    // success
+        [tableData replaceObjectAtIndex:index withObject:@"1"];
+    }else if(result == -1){ // error
+        [tableData replaceObjectAtIndex:index withObject:@"-1"];
+    }
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
+}
+```
+
 ## NSOutlineView
 ```objc
 // 필수 delegate
