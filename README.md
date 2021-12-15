@@ -183,6 +183,16 @@ NSString *x = [s valueForKey:@"firstName"];
   [_mainWindow showWindow:nil];
 ```
 
+## NSViewController
+
+- custom view size 맞추기
+
+```objc
+  _errorCodeExplanationViewContoller = [[ErrorCodeExplanationViewContoller alloc]initWithNibName:@"ErrorCodeExplanationViewContoller" bundle:nil];
+  _errorCodeExplanationViewContoller.view.frame = CGRectMake(0, 0, self.errorCodeExplanationCustomView.frame.size.width, self.errorCodeExplanationCustomView.frame.size.height);
+   self.errorCodeExplanationCustomView addSubview:_errorCodeExplanationViewContoller.view];
+```
+
 ## NSTableView
 ```objc
 // 사용법 예시
