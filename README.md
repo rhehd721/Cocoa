@@ -519,3 +519,10 @@ NSLog (@"grep returned:\n%@", grepOutput);
 
 - no suitable image found.
   - Code Signing Identify 문제 
+
+- UI Main Thread 문제 해결
+```objc
+  dispatch_async(dispatch_get_main_queue(), ^{
+      [self.tableView reloadData];
+  });
+```
