@@ -256,6 +256,13 @@ NSString *x = [s valueForKey:@"firstName"];
 }
 ```
 
+- table row color change
+
+```objc
+  [[TableView rowViewAtRow:row makeIfNecessary:NO] setBackgroundColor:[NSColor colorWithRed:0.992 green:0.851 blue:0.710 alpha:1.0]];
+  [textView.textField setTextColor:[NSColor redColor]];
+```
+
 ## NSOutlineView
 ```objc
 // 필수 delegate
