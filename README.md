@@ -516,6 +516,10 @@ NSLog (@"grep returned:\n%@", grepOutput);
 |-(void)postNotificationName:(NSString *)aName object:(id)anObject|노티피케이션을 만들어서 노티피케이션 센터로 알리는 메서드|
 |-(void)removeObserver:(id)observer|옵저버 목록에서 observer를 지우는 |
 
+## Archive 만들기
+- xcode 상단 Product - Archive 클릭
+- 생성된 아카이브를 클릭하고 Distribute Content 클릭
+
 # ERROR
 - UI API called on a background thread
 ```objc
