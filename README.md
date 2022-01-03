@@ -520,6 +520,20 @@ NSLog (@"grep returned:\n%@", grepOutput);
 - xcode 상단 Product - Archive 클릭
 - 생성된 아카이브를 클릭하고 Distribute Content 클릭
 
+## otool
+
+```
+otool -l libStaticLibraryTest.dylib	—> 바이너리의 정보 확인
+otool -L libStaticLibraryTest.dylib	—> 바이너리 동적 의존성 확인
+
+```
+
+- 바이너리 id path 바꾸기
+```
+install_name_tool -id @rpath/libStaticLibraryTest.dylib libStaticLibraryTest.dylib
+install_name_tool -id @executable_path/../Frameworks/libStaticLibraryTest.dylib libStaticLibraryTest.dylib
+```
+
 # ERROR
 - UI API called on a background thread
 ```objc
