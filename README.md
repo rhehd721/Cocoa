@@ -534,6 +534,9 @@ install_name_tool -id @rpath/libStaticLibraryTest.dylib libStaticLibraryTest.dyl
 install_name_tool -id @executable_path/../Frameworks/libStaticLibraryTest.dylib libStaticLibraryTest.dylib
 ```
 
+## XPC
+- 프로세스간 통신 API
+
 # ERROR
 - UI API called on a background thread
 ```objc
