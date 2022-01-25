@@ -442,7 +442,7 @@ id selectedItem = [_schoolTableView itemAtRow:[_schoolTableView selectedRow]];
 // 현재시간 구하기
   NSDateFormatter * today = [[NSDateFormatter alloc] init];
 //  [today setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
-  [today setDateFormat:@"HH:mm:ss"];
+  [today setDateFormat:@"HH:mm:ss.SSS"];
   NSString * date = [today stringFromDate:[NSDate date]];
   NSLog(@"realTime : %@", date);
 
