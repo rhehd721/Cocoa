@@ -535,11 +535,12 @@ install_name_tool -id @executable_path/../Frameworks/libStaticLibraryTest.dylib 
 ```
 
 ## XPC
+[XPC Sample Code](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingXPCServices.html).
 - 프로세스간 통신 API
 - Apple이 제공하는 IPC의 한 종류
 
 ## Sleep Mode
-[Sleep 관련 SDK](https://developer.apple.com/library/archive/qa/qa1340/_index.html).
+[Sleep Sample Code](https://developer.apple.com/library/archive/qa/qa1340/_index.html).
 
 # ERROR
 - UI API called on a background thread
